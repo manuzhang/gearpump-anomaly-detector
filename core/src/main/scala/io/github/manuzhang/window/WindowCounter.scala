@@ -20,7 +20,7 @@ class WindowCounter(taskContext: TaskContext, conf: UserConfig)
 
 
   override def onNext(message: Message): Unit = {
-    message.msg match {
+    message.value match {
       case word: String =>
         if (!windowCounts.contains(word)) {
           windowCounts += word -> 1L

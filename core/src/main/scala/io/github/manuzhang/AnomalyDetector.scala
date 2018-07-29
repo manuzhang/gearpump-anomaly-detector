@@ -1,18 +1,17 @@
 package io.github.manuzhang
 
-
-import _root_.io.github.manuzhang.detector.Detector
-import _root_.io.github.manuzhang.io.{SinkSimulator, SourceSimulator}
-import _root_.io.github.manuzhang.model.ModelCalculator
-import _root_.io.github.manuzhang.window.WindowCounter
+import detector.Detector
+import io.{SinkSimulator, SourceSimulator}
+import model.ModelCalculator
+import window.WindowCounter
 import akka.actor.ActorSystem
 import org.apache.gearpump.cluster.UserConfig
 import org.apache.gearpump.cluster.client.ClientContext
-import org.apache.gearpump.cluster.main.{ParseResult, CLIOption, ArgumentsParser}
+import org.apache.gearpump.cluster.main.{ArgumentsParser, CLIOption, ParseResult}
 import org.apache.gearpump.streaming.{Processor, StreamApplication}
 import org.apache.gearpump.streaming.sink.DataSinkProcessor
 import org.apache.gearpump.streaming.source.DataSourceProcessor
-import org.apache.gearpump.util.{Graph, LogUtil, AkkaApp}
+import org.apache.gearpump.util.{AkkaApp, Graph, LogUtil}
 import org.apache.gearpump.util.Graph._
 import org.slf4j.Logger
 

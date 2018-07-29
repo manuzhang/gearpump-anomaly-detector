@@ -18,7 +18,7 @@ class SinkSimulator extends DataSink {
   override def open(context: TaskContext): Unit = {}
 
   override def write(message: Message): Unit = {
-    message.msg match {
+    message.value match {
       case Anomaly(word, count) =>
         LOG.info(s"Anomaly!!! word: $word; count: $count")
       case e =>

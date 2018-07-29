@@ -15,7 +15,7 @@ class Detector(taskContext: TaskContext, conf: UserConfig)
 
   override def onNext(message: Message): Unit = {
 
-    message.msg match {
+    message.value match {
       case WindowCounts(word, count) =>
         models.get(word).foreach { case Model(_, min, max) =>
           if (count < min || count > max) {

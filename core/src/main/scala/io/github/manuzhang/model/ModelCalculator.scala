@@ -14,7 +14,7 @@ class ModelCalculator (taskContext: TaskContext, conf: UserConfig)
   private var models = Map.empty[String, ExponentiallyDecayingReservoir]
 
   override def onNext(message: Message): Unit = {
-    message.msg match {
+    message.value match {
       case WindowCounts(word, count) =>
         if (!models.contains(word)) {
           models += word -> new ExponentiallyDecayingReservoir()

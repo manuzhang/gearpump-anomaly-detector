@@ -15,10 +15,5 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-resolvers += Resolver.url("sbt-plugin", url("http://dl.bintray.com/sbt/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
-
-resolvers += Classpaths.sbtPluginReleases
-
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.11.2")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.7")
 
