@@ -12,7 +12,7 @@ object core extends SbtModule with PublishModule {
     description = artifactName(),
     organization = "io.github.manuzhang",
     url = "https://github.com/manuzhang/gearpump-anomaly-detector",
-    licenses = Seq(License.MIT),
+    licenses = Seq(License.`CC0-1.0`),
     scm = SCM(
       "git://github.com/manuzhang/gearpump-anomaly-detector.git",
       "scm:git://github.com/manuzhang/gearpump-anomaly-detector.git"
